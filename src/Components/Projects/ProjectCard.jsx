@@ -1,31 +1,58 @@
-import { Badge, Box, Button, Flex, Img, Text, Wrap } from '@chakra-ui/react'
-import React from 'react'
+import { Badge, Box, Button, Flex, HStack, Img, Text, Wrap } from "@chakra-ui/react";
+import React from "react";
 
-function ProjectCard({data}) {
-
+function ProjectCard({ data }) {
   return (
-    <Flex flexDir={{base:"column",sm:"column",lg:"row",xl:"row"}}>
-        <Wrap>
-            <Img width={"100%"} flexBasis="100%" src={"https://github.com/FaizanWani133/my-portfolio/blob/main/src/Components/Projects/ProjectCard.jsx"}></Img>
-            <Img width={"200px"} src={data.img2} ></Img>
-            <Img width={"200px"} src={data.img2} ></Img>
-            <Img width={"200px"} src={data.img2} ></Img>
-
-        </Wrap>
+    <Flex
+    mb={"50px"}
+      gap={"20px"}
+      _even={{flexDir:{base:"column",sm:"column",lg:"row-reverse",xl:"row-reverse"}}}
+      
+      flexDir={{ base: "column", sm: "column", lg: "row", xl: "row" }}
+      
+    >
+      <Box borderRadius="10px" p={3} border={"3px solid #77A6F7"} bg="#77A6F7">
         <Box>
-            <Text>{data.title}</Text>
-            <Text>{data.description}</Text>
-            {
-                data.techStacks.map(el=><Badge>{el}</Badge>)
-            }
-            <Button>Github</Button>
-            <Button>Live</Button>
+          <Img
+            border={"2px solid black"}
+            borderRadius="10px"
+            width={"100%"}
+            src={data.img1}
+          ></Img>
         </Box>
-
-
+        <Wrap mt={"10px"} width={"100%"} justify="center">
+          <Img
+            borderRadius="10px"
+            border={"2px solid #D3E3FC"}
+            width={"120px"}
+            src={data.img2}
+          ></Img>
+          <Img
+            borderRadius="10px"
+            border={"2px solid #D3E3FC"}
+            width={"120px"}
+            src={data.img2}
+          ></Img>
+          <Img
+            borderRadius="10px"
+            border={"2px solid #D3E3FC"}
+            width={"120px"}
+            src={data.img2}
+          ></Img>
+        </Wrap>
+      </Box>
+      <Box >
+        <Text mb={"20px"} color={"#9AA4EC"} fontWeight="600" fontSize={{base:"18px",sm:"20px",lg:"30px"}}>{data.title}</Text>
+        <Text mb={"20px"} >{data.description}</Text>
+        <Box mb={"20px"} >{data.techStacks.map((el) => (
+          <Badge>{el}</Badge>
+        ))}</Box>
+        
+        <Button>Github</Button>
+        <Button>Live</Button>
+      </Box>
     </Flex>
-    
-  )
+  );
 }
 
-export default ProjectCard
+export default ProjectCard;
