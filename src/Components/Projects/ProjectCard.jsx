@@ -1,17 +1,35 @@
-import { Badge, Box, Button, Flex, HStack, Img, Text, Wrap } from "@chakra-ui/react";
+import {
+  Badge,
+  Box,
+  Button,
+  Flex,
+  HStack,
+  IconButton,
+  Img,
+  Link,
+  Text,
+  Wrap,
+} from "@chakra-ui/react";
 import React from "react";
+import { GoMarkGithub } from "react-icons/go";
+import { CgMediaLive } from "react-icons/cg";
 
 function ProjectCard({ data }) {
   return (
     <Flex
-    mb={"50px"}
+      mb={"50px"}
       gap={"20px"}
-      _even={{flexDir:{base:"column",sm:"column",lg:"row-reverse",xl:"row-reverse"}}}
-      
+      _even={{
+        flexDir: {
+          base: "column",
+          sm: "column",
+          lg: "row-reverse",
+          xl: "row-reverse",
+        },
+      }}
       flexDir={{ base: "column", sm: "column", lg: "row", xl: "row" }}
-      
     >
-      <Box borderRadius="10px" p={3} border={"3px solid #77A6F7"} bg="#77A6F7">
+      <Box  borderRadius="10px" p={3} border={"3px solid #77A6F7"} bg="#77A6F7">
         <Box>
           <Img
             border={"2px solid black"}
@@ -31,25 +49,36 @@ function ProjectCard({ data }) {
             borderRadius="10px"
             border={"2px solid #D3E3FC"}
             width={"120px"}
-            src={data.img2}
+            src={data.img3}
           ></Img>
           <Img
             borderRadius="10px"
             border={"2px solid #D3E3FC"}
             width={"120px"}
-            src={data.img2}
+            src={data.img4}
           ></Img>
         </Wrap>
       </Box>
-      <Box >
-        <Text mb={"20px"} color={"#9AA4EC"} fontWeight="600" fontSize={{base:"18px",sm:"20px",lg:"30px"}}>{data.title}</Text>
-        <Text mb={"20px"} >{data.description}</Text>
-        <Box mb={"20px"} >{data.techStacks.map((el) => (
-          <Badge>{el}</Badge>
-        ))}</Box>
+      <Box>
+        <Text
+          mb={"20px"}
+          color={"#9AA4EC"}
+          fontWeight="600"
+          fontSize={{ base: "18px", sm: "20px", lg: "30px" }}
+        >
+          {data.title}
+        </Text>
+        <Text mb={"20px"}>{data.description}</Text>
+        <Box mb={"20px"}>
+            
+          {data.techStacks.map((el) => (
+            <Badge p={1} borderRadius="10px" colorScheme={"teal"} mr={"20px"}>{el}</Badge>
+          ))}
+        </Box>
+        <Flex gap={"20px"}><Link href={data.github} isExternal ><IconButton colorScheme={"teal"} icon={<GoMarkGithub/> }/> </Link>
+        <Link href={data.live} isExternal><IconButton colorScheme={"teal"} icon={<CgMediaLive />}></IconButton> </Link></Flex>
+
         
-        <Button>Github</Button>
-        <Button>Live</Button>
       </Box>
     </Flex>
   );
