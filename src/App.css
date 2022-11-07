@@ -1,5 +1,9 @@
 .App {
   text-align: center;
-  background-color:linear-gradient(to right, #e0eafc, #cfdef3);
+  background-color:grey;
+  font-family: Nunito,sans-serif !important;
+}
+.css-wah4g8{
+  justify-content: center;
 }
 
