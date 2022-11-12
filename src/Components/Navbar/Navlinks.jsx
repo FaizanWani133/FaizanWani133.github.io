@@ -29,7 +29,7 @@ function Navlinks() {
   return (<>
   <Flex display={{base:"none",sm:"none",lg:"flex",xl:"flex"}} justify={"space-between"} align="center" flexGrow=".2">
     {
-        navLinks.map(link=><Link href={`#${link.title}`} scrollBehavior="smooth"  color={"#77A6F7"} _hover={{color:"red",transform:"scale(1.2)",textDecoration:"none"}} textDecoration="none" fontSize={"18px"} key={link.title}>{link.title}</Link>)
+        navLinks.map(link=><Link key={link.title} href={`#${link.title}`} scrollBehavior="smooth"  color={"#77A6F7"} _hover={{color:"red",transform:"scale(1.2)",textDecoration:"none"}} textDecoration="none" fontSize={"18px"} >{link.title}</Link>)
     }
     <Button colorScheme={"red"}>Resume</Button>
     </Flex>
@@ -44,7 +44,7 @@ function Navlinks() {
   />
   <MenuList  width={"100vw"}>
     
-    {navLinks.map(el=><MenuItem width={"100%"} textAlign="center"><Link href={`#${el.title}`} onClick={()=>{
+    {navLinks.map(el=><MenuItem key={el.title} width={"100%"} textAlign="center"><Link href={`#${el.title}`} onClick={()=>{
         
     }} width={"100%"} textAlign="center">{el.title}</Link></MenuItem>)}
   </MenuList>

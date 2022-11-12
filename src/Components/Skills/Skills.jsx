@@ -63,8 +63,8 @@ function Skills() {
       justify="center"
     >
       {skillList.map((skill) => (
-        <AnimationOnScroll animateIn="animate__fadeIn" duration={2} >
-        <VStack _hover={{transform:"scale(1.2)"}} justifyContent={"space-between"} boxShadow="rgba(0, 0, 0, 0.35) 0px 5px 15px" p="3" borderRadius={"10px"} w={{base:"100px",sm:"110px",lg:"120px",xl:"120px"}}>
+        <AnimationOnScroll key={skill.title} animateIn="animate__fadeIn" duration={2} >
+        <VStack _hover={{transform:{base:"none",sm:"none",lg:"scale(1.2)",xl:"scale(1.2)"}}} justifyContent={"space-between"} boxShadow="rgba(0, 0, 0, 0.35) 0px 5px 15px" p="3" borderRadius={"10px"} w={{base:"100px",sm:"110px",lg:"120px",xl:"120px"}}>
           <Img src={skill.logo}></Img>
           <Text  textAlign={"center"}>{skill.title}</Text>
         </VStack>

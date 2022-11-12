@@ -1,4 +1,4 @@
-import { Box, Button, Divider, Flex, Heading, Img, Text, } from "@chakra-ui/react";
+import { Box, Button, Divider, Flex, Heading, Img, Link, Text, } from "@chakra-ui/react";
 import React from "react";
 import Typewriter from 'typewriter-effect';
 
@@ -26,7 +26,7 @@ function About() {
           textAlign={{ base: "center", sm: "center", lg: "left", xl: "left" }}
           lineHeight="30px"
         >
-          <Text fontSize={{base:"20px",sm:"25px",lg:"30px",xl:"30px"}} mb="20px" fontWeight="bold">
+          <Link _hover={{textDecoration:"none"}} fontSize={{base:"20px",sm:"25px",lg:"30px",xl:"30px"}} mb="20px" fontWeight="bold">
           
 
 <Typewriter
@@ -37,7 +37,7 @@ function About() {
   }}
 />
                 
-          </Text>
+          </Link>
           <Text fontWeight={"500"}>
             I am a Full Stack Web Developer and i have knowledge in HTML, CSS,
             JS, REACT and i make user-friendly websites.

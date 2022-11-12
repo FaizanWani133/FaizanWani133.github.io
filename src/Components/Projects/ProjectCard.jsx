@@ -76,7 +76,7 @@ function ProjectCard({ data }) {
         <Box mb={"20px"}>
             
           {data.techStacks.map((el) => (
-            <Badge p={1} borderRadius="10px" colorScheme={"orange"}  mr={"20px"}>{el}</Badge>
+            <Badge key={el} p={1} borderRadius="10px" colorScheme={"orange"}  mr={"20px"}>{el}</Badge>
           ))}
         </Box>
         <Flex gap={"20px"}><Link href={data.github} isExternal ><IconButton colorScheme={"red"} icon={<GoMarkGithub/> }/> </Link>
