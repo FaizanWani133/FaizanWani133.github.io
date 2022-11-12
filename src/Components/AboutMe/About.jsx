@@ -48,6 +48,7 @@ function About() {
         </Box>
         <Box width={{ base: "100%", sm: "100%", lg: "50%", xl: "50%" }}>
           <Img
+          alt="random image"
             margin={"auto"}
             width={{base:"150px",sm:"180px",lg:"200px",xl:"250px"}}
             height={{base:"150px",sm:"180px",lg:"200px",xl:"250px"}}

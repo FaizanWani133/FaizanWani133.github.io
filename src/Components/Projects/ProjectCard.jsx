@@ -34,6 +34,7 @@ function ProjectCard({ data }) {
       <Box  borderRadius="10px" p={3} border={"3px solid #77A6F7"} bg="#77A6F7">
         <Box>
           <Img
+           alt="random image5"
             border={"2px solid black"}
             borderRadius="10px"
             width={"100%"}
@@ -42,18 +43,21 @@ function ProjectCard({ data }) {
         </Box>
         <Wrap mt={"10px"} width={"100%"} justify="center">
           <Img
+           alt="random image4"
             borderRadius="10px"
             border={"2px solid #D3E3FC"}
             width={"120px"}
             src={data.img2}
           ></Img>
           <Img
+           alt="random image3"
             borderRadius="10px"
             border={"2px solid #D3E3FC"}
             width={"120px"}
             src={data.img3}
           ></Img>
           <Img
+           alt="random image2"
             borderRadius="10px"
             border={"2px solid #D3E3FC"}
             width={"120px"}

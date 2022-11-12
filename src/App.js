@@ -7,7 +7,6 @@ import Footer from './Components/footer/Footer';
 import Navbar from './Components/Navbar/Navbar';
 import Projects from './Components/Projects/Projects';
 import Skills from './Components/Skills/Skills';
-import GithubCalander from './Components/Statistics/GithubCalander';
 import Stats from './Components/Statistics/Stats';
 
 function App() {
