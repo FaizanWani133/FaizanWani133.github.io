@@ -1,4 +1,4 @@
-import { Flex, Link, Text ,Button, Accordion, AccordionItem, AccordionButton, AccordionPanel, AccordionIcon, Menu, MenuButton, MenuList, MenuItem, IconButton, Box } from '@chakra-ui/react'
+import { Flex, Link,Button,  Menu, MenuButton, MenuList, MenuItem, IconButton, Box } from '@chakra-ui/react'
 import {HamburgerIcon} from "@chakra-ui/icons"
 import React from 'react'
 
@@ -38,8 +38,8 @@ function Navlinks() {
   <MenuButton
     as={IconButton}
     aria-label='Options'
-    icon=<HamburgerIcon color={"red"}
-    />
+    icon= {<HamburgerIcon color={"red"}
+    />}
       
   />
   <MenuList  width={"100vw"}>

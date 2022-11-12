@@ -1,4 +1,4 @@
-import { Box, Center, Grid, Text, Wrap } from '@chakra-ui/react'
+import { Box,  Text, Wrap } from '@chakra-ui/react'
 import React from 'react'
 import { AnimationOnScroll } from 'react-animation-on-scroll'
 

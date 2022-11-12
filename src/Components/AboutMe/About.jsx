@@ -1,4 +1,4 @@
-import { Box, Button, Divider, Flex, Heading, Img, Text, VStack, Wrap } from "@chakra-ui/react";
+import { Box, Button, Divider, Flex, Heading, Img, Text, } from "@chakra-ui/react";
 import React from "react";
 import Typewriter from 'typewriter-effect';
 

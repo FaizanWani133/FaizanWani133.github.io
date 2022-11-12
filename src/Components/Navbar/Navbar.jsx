@@ -1,4 +1,4 @@
-import { Box, Divider, Flex } from "@chakra-ui/react";
+import { Divider, Flex } from "@chakra-ui/react";
 import React from "react";
 import Headroom from "react-headroom";
 import Logo from "./Logo";

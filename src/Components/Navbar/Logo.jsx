@@ -1,4 +1,4 @@
-import { Box, Img, Link, Text } from '@chakra-ui/react'
+import { Box,  Link, Text } from '@chakra-ui/react'
 import React from 'react'
 
 function Logo() {

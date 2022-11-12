@@ -1,4 +1,4 @@
-import { Box, Heading, Wrap } from '@chakra-ui/react'
+import { Heading, Wrap } from '@chakra-ui/react'
 import React from 'react'
 import Acheivemnts from './Acheivemnts'
 import GithubCalander from './GithubCalander'

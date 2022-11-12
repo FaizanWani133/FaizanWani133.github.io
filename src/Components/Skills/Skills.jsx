@@ -1,4 +1,4 @@
-import { Box, HStack, Img, Text, VStack, Wrap } from "@chakra-ui/react";
+import {  Img, Text, VStack, Wrap } from "@chakra-ui/react";
 import React from "react";
 import { AnimationOnScroll } from "react-animation-on-scroll";
 
