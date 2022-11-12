@@ -1,9 +1,10 @@
 import { Box, Button, Divider, Flex, Heading, Img, Text, VStack, Wrap } from "@chakra-ui/react";
 import React from "react";
+import Typewriter from 'typewriter-effect';
 
 function About() {
   return (
-    <Box mt={"70px"} p={5} bg={"transparent"}>
+    <Box  p={5} bg={"transparent"} id="About%20Me">
         
       <Flex
       bg={"transparent"}
@@ -26,7 +27,16 @@ function About() {
           lineHeight="30px"
         >
           <Text fontSize={{base:"20px",sm:"25px",lg:"30px",xl:"30px"}} mb="20px" fontWeight="bold">
-            Hi, i am Fayzan Mukhtar
+          
+
+<Typewriter
+  options={{
+    strings: ['Hi , I am Fayzan Mukhtar'],
+    autoStart: true,
+    loop: true,
+  }}
+/>
+                
           </Text>
           <Text fontWeight={"500"}>
             I am a Full Stack Web Developer and i have knowledge in HTML, CSS,
@@ -47,7 +57,7 @@ function About() {
           ></Img>
         </Box>
       </Flex>
-      <Box width={"100%"} p="4" mb={"20px"}><Heading textAlign={"center"}>ABOUT ME</Heading></Box>
+      <Box width={"100%"} p="4" mb={"20px"}><Heading textAlign={"center"}><span className='purpleText'>A</span>BOUT ME</Heading></Box>
       
       <Flex
         flexDir={{ base: "column", sm: "column", lg: "row", xl: "row" }}

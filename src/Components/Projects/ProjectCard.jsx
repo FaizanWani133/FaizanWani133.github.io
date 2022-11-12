@@ -13,6 +13,7 @@ import {
 import React from "react";
 import { GoMarkGithub } from "react-icons/go";
 import { CgMediaLive } from "react-icons/cg";
+import { AnimationOnScroll } from "react-animation-on-scroll";
 
 function ProjectCard({ data }) {
   return (
@@ -29,6 +30,7 @@ function ProjectCard({ data }) {
       }}
       flexDir={{ base: "column", sm: "column", lg: "row", xl: "row" }}
     >
+      <AnimationOnScroll animateIn="animate__backInDown">
       <Box  borderRadius="10px" p={3} border={"3px solid #77A6F7"} bg="#77A6F7">
         <Box>
           <Img
@@ -59,6 +61,8 @@ function ProjectCard({ data }) {
           ></Img>
         </Wrap>
       </Box>
+      </AnimationOnScroll>
+      <AnimationOnScroll animateIn="animate__zoomIn">
       <Box>
         <Text
           mb={"20px"}
@@ -72,14 +76,15 @@ function ProjectCard({ data }) {
         <Box mb={"20px"}>
             
           {data.techStacks.map((el) => (
-            <Badge p={1} borderRadius="10px" colorScheme={"teal"} mr={"20px"}>{el}</Badge>
+            <Badge p={1} borderRadius="10px" colorScheme={"orange"}  mr={"20px"}>{el}</Badge>
           ))}
         </Box>
-        <Flex gap={"20px"}><Link href={data.github} isExternal ><IconButton colorScheme={"teal"} icon={<GoMarkGithub/> }/> </Link>
-        <Link href={data.live} isExternal><IconButton colorScheme={"teal"} icon={<CgMediaLive />}></IconButton> </Link></Flex>
+        <Flex gap={"20px"}><Link href={data.github} isExternal ><IconButton colorScheme={"red"} icon={<GoMarkGithub/> }/> </Link>
+        <Link href={data.live} isExternal><IconButton colorScheme={"red"} icon={<CgMediaLive />}></IconButton> </Link></Flex>
 
         
       </Box>
+      </AnimationOnScroll>
     </Flex>
   );
 }

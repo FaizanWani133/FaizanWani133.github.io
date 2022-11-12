@@ -1,9 +1,13 @@
 .App {
   text-align: center;
-  background-color:grey;
+  background-color:rgb(255, 255, 255);
   font-family: Nunito,sans-serif !important;
+  
 }
 .css-wah4g8{
   justify-content: center;
+}
+.purpleText{
+  color: red;
 }
 

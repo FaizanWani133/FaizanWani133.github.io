@@ -1,5 +1,6 @@
 import { Box, HStack, Img, Text, VStack, Wrap } from "@chakra-ui/react";
 import React from "react";
+import { AnimationOnScroll } from "react-animation-on-scroll";
 
 function Skills() {
   const skillList = [
@@ -62,12 +63,15 @@ function Skills() {
       justify="center"
     >
       {skillList.map((skill) => (
+        <AnimationOnScroll animateIn="animate__fadeIn" duration={2} >
         <VStack _hover={{transform:"scale(1.2)"}} justifyContent={"space-between"} boxShadow="rgba(0, 0, 0, 0.35) 0px 5px 15px" p="3" borderRadius={"10px"} w={{base:"100px",sm:"110px",lg:"120px",xl:"120px"}}>
           <Img src={skill.logo}></Img>
           <Text  textAlign={"center"}>{skill.title}</Text>
         </VStack>
+        </AnimationOnScroll>
       ))}
     </Wrap>
+    
   );
 }
 

@@ -1,25 +1,26 @@
-import { Box, Flex } from "@chakra-ui/react";
+import { Box, Divider, Flex } from "@chakra-ui/react";
 import React from "react";
+import Headroom from "react-headroom";
 import Logo from "./Logo";
 import Navlinks from "./Navlinks";
 
 function Navbar() {
   return (
+    <Headroom>
     <Flex
-      position={"fixed"}
-      top="0"
-      left={"0"}
       width={"100%"}
       p={4}
       paddingX={{base:"10px",sm:"20px",lg:"25px",xl:"30px"}}
       align="center"
       justify={"space-between"}
-      zIndex="5"
-      bg={"rgba(255,255,255,.9)"}
+      bg={"rgba(255,255,255,1)"}
+      // boxShadow="rgba(119, 166, 247,0.1) 0px 0px 0px 1px, rgb(209, 213, 219) 0px 0px 0px 1px inset"
     >
       <Logo />
       <Navlinks />
     </Flex>
+    <Divider/>
+    </Headroom>
   );
 }
 
