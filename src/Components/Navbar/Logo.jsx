@@ -1,12 +1,16 @@
 import { Box,  Link, Text } from '@chakra-ui/react'
 import React from 'react'
+import { AnimationOnScroll } from "react-animation-on-scroll";
 
 function Logo() {
   return (
+   
     <Box>
-        <Text fontSize={{base:"18px",sm:"25px",lg:"30px",xl:"35px"}} color="#77A6F7"><Link href='#About%20Me' ><span className='purpleText'> F</span>W</Link></Text>
-
+      
+        <Text _hover={{textDecoration:"none",transform:"scale(1.2)",color:"red"}} animation="ease-in" fontSize={{base:"18px",sm:"25px",lg:"30px",xl:"35px"}} color="#77A6F7"><Link _hover={{textDecoration:"none",transform:"scale(1.2)"}} href='#About%20Me' > FW</Link></Text>
+        
     </Box>
+    
   )
 }
 

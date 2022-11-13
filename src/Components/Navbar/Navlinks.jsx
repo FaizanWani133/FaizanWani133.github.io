@@ -31,22 +31,24 @@ function Navlinks() {
     {
         navLinks.map(link=><Link key={link.title} href={`#${link.title}`} scrollBehavior="smooth"  color={"#77A6F7"} _hover={{color:"red",transform:"scale(1.2)",textDecoration:"none"}} textDecoration="none" fontSize={"18px"} >{link.title}</Link>)
     }
-    <Button colorScheme={"red"}>Resume</Button>
+    <Link _hover={{textDecoration:"none"}} href='https://drive.google.com/u/0/uc?id=19DUuGJJO3vuhNIubDg32iLLw0I3wMDay&export=download'><Button colorScheme={"red"}>Resume</Button></Link>
     </Flex>
     <Box display={{base:"block",sm:"block",lg:"none",xl:"none"}}>
-    <Menu  >
+    <Menu   >
   <MenuButton
     as={IconButton}
     aria-label='Options'
     icon= {<HamburgerIcon color={"red"}
+    
+    
     />}
       
   />
   <MenuList  width={"100vw"}>
     
-    {navLinks.map(el=><MenuItem key={el.title} width={"100%"} textAlign="center"><Link href={`#${el.title}`} onClick={()=>{
-        
-    }} width={"100%"} textAlign="center">{el.title}</Link></MenuItem>)}
+    {navLinks.map(el=><MenuItem onClick={()=>{
+      window.location.href=`#${el.title}`
+    }} key={el.title} width={"100%"} textAlign="center">{el.title}</MenuItem>)}
   </MenuList>
 </Menu>
 </Box>
