@@ -56,7 +56,7 @@ function SocialMedia() {
               {el.logo}
               
             </Link>
-            <Link color={"grey"} fontWeight={"500"} mt={"10px"} _hover={{textDecoration:"none",color:"black"}} display={{base:"none",sm:"none",lg:"block"}} href={el.url} fontSize={"20px"}>{el.title}</Link>
+            <Link target={"_blank"} color={"grey"} fontWeight={"500"} mt={"10px"} _hover={{textDecoration:"none",color:"black"}} display={{base:"none",sm:"none",lg:"block"}} href={el.url} fontSize={"20px"}>{el.title}</Link>
           </Box>
         </AnimationOnScroll>
       ))}
