@@ -1,6 +1,6 @@
 import { Box,  Link, Text } from '@chakra-ui/react'
 import React from 'react'
-import { AnimationOnScroll } from "react-animation-on-scroll";
+
 
 function Logo() {
   return (

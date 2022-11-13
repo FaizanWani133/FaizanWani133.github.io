@@ -1,4 +1,4 @@
-import { Box, Flex, IconButton, Link, Text } from "@chakra-ui/react";
+import { Box, Flex, Link } from "@chakra-ui/react";
 import { GoMarkGithub } from "react-icons/go";
 import { ImLinkedin } from "react-icons/im";
 import { MdEmail } from "react-icons/md";
