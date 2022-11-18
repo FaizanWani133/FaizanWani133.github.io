@@ -22,7 +22,7 @@ export const data = [
       img4:"https://github.com/FaizanWani133/my-portfolio/blob/ab9883445eaaed609295ea45d5bccd6b0130a021/src/Images/Screenshot%20(12).png?raw=true",
       techStacks:["HTML","CSS","JavaScript","json-server"],
       github:"https://github.com/FaizanWani133/Expedia-Clone",
-      live:"faizansexpedia.netlify.app/",
+      live:"https://faizansexpedia.netlify.app/",
 
   },
   {
@@ -48,7 +48,7 @@ export const data = [
       img4:"https://github.com/FaizanWani133/my-portfolio/blob/ab9883445eaaed609295ea45d5bccd6b0130a021/src/Images/Screenshot%20(23).png?raw=true",
       techStacks:["HTML","CSS","JavaScript","TMDB API"],
       github:"https://github.com/FaizanWani133/Netflix-Database",
-      live:"faizannetflix.netlify.app/",
+      live:"https://faizannetflix.netlify.app/",
 
   },
 ];

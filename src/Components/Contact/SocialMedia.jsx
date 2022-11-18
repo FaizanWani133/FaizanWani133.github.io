@@ -17,7 +17,7 @@ function SocialMedia() {
     },
     {
       url: "https://www.linkedin.com/in/faizan-wani-73914a22a/",
-      logo: <ImLinkedin  />,
+      logo: <ImLinkedin />,
       id: 2,
       title: "LinkedIn",
     },
@@ -29,7 +29,7 @@ function SocialMedia() {
     },
     {
       url: "tel:7006846972",
-      logo: <BsTelephoneOutboundFill  />,
+      logo: <BsTelephoneOutboundFill />,
       id: 4,
       title: "7006846972",
     },
@@ -42,7 +42,13 @@ function SocialMedia() {
     >
       {social.map((el) => (
         <AnimationOnScroll key={el.id} animateIn="animate__bounceIn">
-          <Box  textAlign={"center"} alignItems="center" justifyContent="center" display={"flex"} flexDir="column">
+          <Box
+            textAlign={"center"}
+            alignItems="center"
+            justifyContent="center"
+            display={"flex"}
+            flexDir="column"
+          >
             <Link
               target={"_blank"}
               href={el.url}
@@ -50,13 +56,22 @@ function SocialMedia() {
               alignContent={"center"}
               fontSize="30px"
               color={"grey"}
-              _hover={{color:"black"}}
-              
+              _hover={{ color: "black" }}
             >
               {el.logo}
-              
             </Link>
-            <Link target={"_blank"} color={"grey"} fontWeight={"500"} mt={"10px"} _hover={{textDecoration:"none",color:"black"}} display={{base:"none",sm:"none",lg:"block"}} href={el.url} fontSize={"20px"}>{el.title}</Link>
+            <Link
+              target={"_blank"}
+              color={"grey"}
+              fontWeight={"500"}
+              mt={"10px"}
+              _hover={{ textDecoration: "none", color: "black" }}
+              display={{ base: "none", sm: "none", lg: "block" }}
+              href={el.url}
+              fontSize={"20px"}
+            >
+              {el.title}
+            </Link>
           </Box>
         </AnimationOnScroll>
       ))}
