@@ -56,7 +56,7 @@ function About() {
             height={{base:"150px",sm:"180px",lg:"200px",xl:"250px"}}
             borderRadius={"50%"}
             objectFit="cover"
-            src="https://media-exp1.licdn.com/dms/image/C4E03AQF3EuoNrSUnxg/profile-displayphoto-shrink_200_200/0/1642962418101?e=1673481600&v=beta&t=RJMXd-tr2JfxtL20ez-uJsgfyK9dXHrBQCht8ifo95Y"
+            src="https://github.com/FaizanWani133/my-portfolio/blob/main/src/Images/profile-pic%20(3)%20(1).png"
           ></Img>
         </Box>
       </Flex>
