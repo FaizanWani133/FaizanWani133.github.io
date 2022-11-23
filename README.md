@@ -1,5 +1,5 @@
 This  is my Personal Portfolio Website made using React and Chakra Ui.
-live link = https://faixanw.netlify.app/
+live link = https://faizanwani133.github.io/
 
 
 
