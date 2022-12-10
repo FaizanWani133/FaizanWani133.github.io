@@ -42,7 +42,7 @@ function About() {
             I am a Full Stack Web Developer and i have knowledge in HTML, CSS,
             JS, REACT and i make user-friendly websites.
           </Text>
-          <Link _hover={{textDecoration:"none"}} href='https://drive.google.com/u/0/uc?id=19DUuGJJO3vuhNIubDg32iLLw0I3wMDay&export=download'>
+          <Link _hover={{textDecoration:"none"}} href='https://drive.google.com/u/1/uc?id=1Gop4PetnFzT8rh_jaB7ag5TYymIXvw8q&export=download'>
           <Button mt={"10px"} colorScheme="red">
             Download CV
           </Button>
