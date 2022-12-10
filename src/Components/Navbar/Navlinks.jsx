@@ -31,7 +31,7 @@ function Navlinks() {
     {
         navLinks.map(link=><Link key={link.title} href={`#${link.title}`} scrollBehavior="smooth"  color={"#77A6F7"} _hover={{color:"red",transform:"scale(1.2)",textDecoration:"none"}} textDecoration="none" fontSize={"18px"} >{link.title}</Link>)
     }
-    <Link _hover={{textDecoration:"none"}} href='https://drive.google.com/u/0/uc?id=19DUuGJJO3vuhNIubDg32iLLw0I3wMDay&export=download'><Button colorScheme={"red"}>Resume</Button></Link>
+    <Link _hover={{textDecoration:"none"}} href='https://drive.google.com/u/1/uc?id=1Gop4PetnFzT8rh_jaB7ag5TYymIXvw8q&export=download'><Button colorScheme={"red"}>Resume</Button></Link>
     </Flex>
     <Box display={{base:"block",sm:"block",lg:"none",xl:"none"}}>
     <Menu   >
