@@ -22,7 +22,7 @@ export const data = [
       img4:require("./../../Images/Screenshot (13).png"),
       techStacks:["HTML","CSS","JavaScript","json-server"],
       github:"https://github.com/FaizanWani133/Expedia-Clone",
-      live:"https://faizansexpedia.netlify.app/",
+      live:"https://expediaclone2.netlify.app/",
 
   },
   {
@@ -35,7 +35,7 @@ export const data = [
       img4:require("./../../Images/Screenshot (19).png"),
       techStacks:["HTML","CSS","JavaScript"],
       github:"https://github.com/FaizanWani133/BigBasket-Clone/tree/main/MasaiKnights-Bigbasket",
-      live:"https://faizansbigbasket.netlify.app//",
+      live:"https://bigbasketclone2.netlify.app",
 
   },
   {
@@ -48,7 +48,21 @@ export const data = [
       img4:require("./../../Images/Screenshot (22).png"),
       techStacks:["HTML","CSS","JavaScript","TMDB API"],
       github:"https://github.com/FaizanWani133/Netflix-Database",
-      live:"https://faizannetflix.netlify.app/",
+      live:"https://moviedb2.netlify.app/",
 
   },
+  ,
+  {
+    title: "Youtube Clone",
+    description:
+      "This is a Youtube Clone where users can search for Videos,Channels , playlists. On clicking a Video , it will be played in a modal that can be closed and i have also added filtering functionalities",
+      img1:require("./../../Images/Screenshot (33).png"),
+      img2:require("./../../Images/Screenshot (34).png"),
+      img3:require("./../../Images/Screenshot (35).png"),
+      img4:require("./../../Images/Screenshot (37).png"),
+      techStacks:["HTML","CSS","JavaScript","Youtube Api"],
+      github:"https://github.com/FaizanWani133/Youtube-Clone",
+      live:"https://youtubemini2.netlify.app/",
+
+  }
 ];

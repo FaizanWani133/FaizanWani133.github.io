@@ -47,8 +47,8 @@ function Navlinks() {
   <MenuList  width={"100vw"}>
     
     {navLinks.map(el=><MenuItem onClick={()=>{
-      window.location.href=`#${el.title}`
-    }} key={el.title} width={"100%"} textAlign="center">{el.title}</MenuItem>)}
+      return window.location.href=`#${el.title}`
+    }}  key={el.title}  textAlign="center">{el.title}</MenuItem>)}
   </MenuList>
 </Menu>
 </Box>
