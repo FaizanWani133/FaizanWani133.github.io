@@ -56,7 +56,7 @@ function About() {
             height={{base:"150px",sm:"180px",lg:"200px",xl:"250px"}}
             borderRadius={"50%"}
             objectFit="cover"
-            src="https://github.com/FaizanWani133/my-portfolio/blob/main/src/Images/profile-pic%20(4).png?raw=true"
+            src={require("./../../Images/profile-pic (4).png")}
           ></Img>
         </Box>
       </Flex>
