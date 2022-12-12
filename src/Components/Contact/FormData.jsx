@@ -11,19 +11,27 @@ import React from "react";
 import { useState } from "react";
 import emailjs from "@emailjs/browser";
 
+const initialValues = {
+  name: "",
+  email: "",
+  number: "",
+  message: "",
+};
 function FormData() {
   const toast = useToast();
-  const [form, setForm] = useState({});
-  function handleChange(e, key) {
-    console.log(form);
-    setForm({ ...form, [key]: e.target.value });
+  const [form, setForm] = useState(initialValues);
+  function handleChange(e) {
+    const { name, value } = e.target;
+    setForm({ ...form, [name]: value });
   }
   emailjs.init("iK__ZbSVSIft1TY_Y");
+  
 
   function sendEmail() {
     emailjs
       .send("service_5yotly7", "template_1nkxt4t", form, "iK__ZbSVSIft1TY_Y")
       .then(()=>{
+        setForm(initialValues)
         return toast(
           {
             title: 'Email Sent',
@@ -58,28 +66,31 @@ function FormData() {
           value={form.name}
           placeholder="Enter Full Name"
           type={"text"}
-          onChange={(e) => handleChange(e, "name")}
+          onChange={(e) => handleChange(e)}
         ></Input>
         <Input
           required
           name="email"
+          value={form.email}
           placeholder="Enter Email Address"
           type={"email"}
-          onChange={(e) => handleChange(e, "email")}
+          onChange={(e) => handleChange(e)}
         ></Input>
         <Input
           required
           name="number"
+          value={form.number}
           placeholder="Enter Phone Number"
           type={"number"}
-          onChange={(e) => handleChange(e, "number")}
+          onChange={(e) => handleChange(e)}
         ></Input>
         <Textarea
           required
           name="message"
           minH={"150px"}
+          value={form.message}
           placeholder="Enter Your Message"
-          onChange={(e) => handleChange(e, "message")}
+          onChange={(e) => handleChange(e)}
         ></Textarea>
         {<Button disabled={!form.name || !form.email || !form.number || !form.message} onClick={sendEmail} type="submit" colorScheme={"red"}>
           Submit
