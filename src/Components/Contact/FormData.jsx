@@ -20,6 +20,7 @@ const initialValues = {
 function FormData() {
   const toast = useToast();
   const [form, setForm] = useState(initialValues);
+  const [loading,setLoading] = useState(false);
   function handleChange(e) {
     const { name, value } = e.target;
     setForm({ ...form, [name]: value });
@@ -28,9 +29,11 @@ function FormData() {
   
 
   function sendEmail() {
+    setLoading(true);
     emailjs
       .send("service_5yotly7", "template_1nkxt4t", form, "iK__ZbSVSIft1TY_Y")
       .then(()=>{
+        setLoading(false);
         setForm(initialValues)
         return toast(
           {
@@ -92,7 +95,7 @@ function FormData() {
           placeholder="Enter Your Message"
           onChange={(e) => handleChange(e)}
         ></Textarea>
-        {<Button disabled={!form.name || !form.email || !form.number || !form.message} onClick={sendEmail} type="submit" colorScheme={"red"}>
+        {<Button loadingText="Submitting" isLoading={loading} disabled={!form.name || !form.email || !form.number || !form.message} onClick={sendEmail} type="submit" colorScheme={"red"}>
           Submit
         </Button>}
       </FormControl>
