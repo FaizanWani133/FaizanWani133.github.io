@@ -1,113 +1,64 @@
 import {
-  Badge,
-  Box,
-  Flex,
-  IconButton,
-  Img,
-  Link,
-  Text,
-  Wrap,
-} from "@chakra-ui/react";
-import React from "react";
-import { GoMarkGithub } from "react-icons/go";
-import { CgMediaLive } from "react-icons/cg";
-import { AnimationOnScroll } from "react-animation-on-scroll";
-
-function ProjectCard({ data }) {
-  return (
-    <Flex
-      mb={"50px"}
-      gap={"20px"}
-      _even={{
-        flexDir: {
-          base: "column",
-          sm: "column",
-          lg: "row-reverse",
-          xl: "row-reverse",
-        },
-      }}
-      flexDir={{ base: "column", sm: "column", lg: "row", xl: "row" }}
-    >
-      <AnimationOnScroll animateIn="animate__backInDown">
-        <Box
-          borderRadius="10px"
-          p={3}
-          border={"3px solid #77A6F7"}
-          bg="#77A6F7"
+    Box,
+    Flex,
+    Heading,
+    IconButton,
+    Img,
+    Link,
+    Stack,
+    Text,
+    useStyleConfig,
+  } from "@chakra-ui/react";
+  import { motion } from "framer-motion";
+  import { FaGithub } from "react-icons/fa";
+  import { MdOnlinePrediction } from "react-icons/md";
+  
+  function ProjectCard({ data }) {
+    const styles = useStyleConfig("ProjectCard");
+  
+    return (
+      <Box
+        as={motion.div}
+        width={"25%"}
+        borderRadius={"10px"}
+        overflow={"hidden"}
+        sx={styles}
+        position="relative" // Add position relative to the Box
+      >
+        <motion.div
+          whileHover={{ scale: 1.5 }}
+          transition={{ type: "tween", stiffness: 100 }}
         >
-          <Box>
-            <Img
-              alt="random image5"
-              border={"2px solid black"}
-              borderRadius="10px"
-              width={"100%"}
-              src={data.img1}
-            ></Img>
-          </Box>
-          <Wrap mt={"10px"} width={"100%"} justify="center">
-            <Img
-              alt="random image4"
-              borderRadius="10px"
-              border={"2px solid #D3E3FC"}
-              width={"120px"}
-              src={data.img2}
-            ></Img>
-            <Img
-              alt="random image3"
-              borderRadius="10px"
-              border={"2px solid #D3E3FC"}
-              width={"120px"}
-              src={data.img3}
-            ></Img>
-            <Img
-              alt="random image2"
-              borderRadius="10px"
-              border={"2px solid #D3E3FC"}
-              width={"120px"}
-              src={data.img4}
-            ></Img>
-          </Wrap>
-        </Box>
-      </AnimationOnScroll>
-      <AnimationOnScroll animateIn="animate__zoomIn">
-        <Box>
-          <Text
-            mb={"20px"}
-            color={"#9AA4EC"}
-            fontWeight="600"
-            fontSize={{ base: "18px", sm: "20px", lg: "30px" }}
-          >
-            {data.title}
-          </Text>
-          <Text mb={"20px"}>{data.description}</Text>
-          <Box mb={"20px"}>
-            {data.techStacks.map((el) => (
-              <Badge
-                key={el}
-                p={1}
-                borderRadius="10px"
-                colorScheme={"orange"}
-                mr={"20px"}
-              >
-                {el}
-              </Badge>
-            ))}
-          </Box>
-          <Flex gap={"20px"}>
-            <Link href={data.github} isExternal>
-              <IconButton colorScheme={"red"} icon={<GoMarkGithub />} />{" "}
-            </Link>
-            <Link href={data.live} isExternal>
-              <IconButton
-                colorScheme={"red"}
-                icon={<CgMediaLive />}
-              ></IconButton>{" "}
-            </Link>
-          </Flex>
-        </Box>
-      </AnimationOnScroll>
-    </Flex>
-  );
-}
+          <Img src={data.img1} alt="Green double couch with wooden legs" />
+        </motion.div>
+  
+        {/* Add a wrapper for the icon buttons */}
+        <motion.div
+          whileHover={{ scale: 1.5 }}
+          transition={{ type: "tween", stiffness: 100 }}
+        >
+        <Box p="6" bg={"blue.900"} >
+          <Heading  size="md">{data.title}</Heading>
+        
+          <Text fontWeight={"600"}>Web Development</Text>
 
-export default ProjectCard;
+        {/* <Flex
+          transition="opacity 0.3s" // Add transition for opacity change
+          gap={3}
+        >
+          <Link href={data.github} isExternal>
+            <IconButton icon={<FaGithub />} />
+          </Link>
+          <Link href={data.live} isExternal>
+            <IconButton icon={<MdOnlinePrediction />} />
+          </Link>
+        </Flex> */}
+        </Box>
+        </motion.div>
+
+      </Box>
+    );
+  }
+  
+  export default ProjectCard;
+  

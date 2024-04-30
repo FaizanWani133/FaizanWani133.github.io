@@ -1,6 +1,7 @@
-import {  Img, Text, VStack, Wrap } from "@chakra-ui/react";
+import {  Flex, Heading, Img, Stack, Text, VStack, Wrap } from "@chakra-ui/react";
 import React from "react";
-import { AnimationOnScroll } from "react-animation-on-scroll";
+import ExpertiseCard from "./ExpertiseCard";
+import { FaReact } from "react-icons/fa";
 
 function Skills() {
   const skillList = [
@@ -54,7 +55,15 @@ function Skills() {
     },
   ];
   return (
-    <Wrap
+    <Stack  justifyContent={'center'} mb={10}>
+      <Heading mb={10} textAlign={'center'} textTransform={'uppercase'}>My Expertise</Heading>
+      <Flex justifyContent={'center'} gap={1} >
+      <ExpertiseCard icon={<FaReact size={50}/>} title={'React Developer'} description={'Passionate about crafting seamless web and mobile experiences using the latest technolo'} />
+      <ExpertiseCard icon={<FaReact size={50}/>} title={'React Developer'} description={'Passionate about crafting seamless web and mobile experiences using the latest technolo'} />
+      <ExpertiseCard icon={<FaReact size={50}/>} title={'React Developer'} description={'Passionate about crafting seamless web and mobile experiences using the latest technolo'} />
+      </Flex>
+      
+    {/* <Wrap
       width={{ base: "95%", sm: "90%", lg: "90%", xl: "90%" }}
       margin="0 auto"
       mt={"60px"}
@@ -70,8 +79,8 @@ function Skills() {
         </VStack>
         </AnimationOnScroll>
       ))}
-    </Wrap>
-    
+    </Wrap> */}
+    </Stack>
   );
 }
 
