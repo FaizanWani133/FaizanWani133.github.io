@@ -7,6 +7,7 @@ import {
     Link,
     Stack,
     Text,
+    useColorModeValue,
     useStyleConfig,
   } from "@chakra-ui/react";
   import { motion } from "framer-motion";
@@ -15,15 +16,17 @@ import {
   
   function ProjectCard({ data }) {
     const styles = useStyleConfig("ProjectCard");
+    const bg = useColorModeValue('gray.50', 'gray.700')
   
     return (
       <Box
         as={motion.div}
-        width={"25%"}
+        width={{xl:"25%"}}
         borderRadius={"10px"}
         overflow={"hidden"}
         sx={styles}
         position="relative" // Add position relative to the Box
+        backgroundColor={bg}
       >
         <motion.div
           whileHover={{ scale: 1.5 }}
@@ -37,7 +40,7 @@ import {
           whileHover={{ scale: 1.5 }}
           transition={{ type: "tween", stiffness: 100 }}
         >
-        <Box p="6" bg={"blue.900"} >
+        <Box p="6"  >
           <Heading  size="md">{data.title}</Heading>
         
           <Text fontWeight={"600"}>Web Development</Text>

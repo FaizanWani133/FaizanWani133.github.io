@@ -57,6 +57,7 @@ function FormData() {
         margin={"0 auto"}
         maxW={"800px"}
         mb={10}
+        p={2}
       >
         <Flex gap={2} width={"100%"}>
           <Input

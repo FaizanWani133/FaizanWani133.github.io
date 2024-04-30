@@ -57,7 +57,7 @@ function Skills() {
   return (
     <Stack  justifyContent={'center'} mb={10}>
       <Heading mb={10} textAlign={'center'} textTransform={'uppercase'}>My Expertise</Heading>
-      <Flex justifyContent={'center'} gap={1} >
+      <Flex justifyContent={'center'} gap={1} wrap={'wrap'} >
       <ExpertiseCard icon={<FaReact size={50}/>} title={'React Developer'} description={'Passionate about crafting seamless web and mobile experiences using the latest technolo'} />
       <ExpertiseCard icon={<FaReact size={50}/>} title={'React Developer'} description={'Passionate about crafting seamless web and mobile experiences using the latest technolo'} />
       <ExpertiseCard icon={<FaReact size={50}/>} title={'React Developer'} description={'Passionate about crafting seamless web and mobile experiences using the latest technolo'} />
