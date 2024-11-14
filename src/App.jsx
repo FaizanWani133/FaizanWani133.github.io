@@ -9,10 +9,10 @@ import {
   Typography,
 } from "@mui/material";
 import Navbar from "./component/Navbar";
-import data from "./data.json";
 import ProjectCard from "./component/ProjectCard";
 import Footer from "./component/Footer";
 import Section from "./component/Section";
+import { myData } from "./data";
 
 function App() {
   return (
@@ -33,11 +33,11 @@ function App() {
           variant="h2"
           sx={{ textTransform: "uppercase", fontWeight: "800" }}
         >
-          Hey, I'm {data.basicInfo.name}
+          Hey, I'm {myData.basicInfo.name}
         </Typography>
 
         <Typography sx={{ fontSize: 20 }}>
-          {data.basicInfo.description}
+          {myData.basicInfo.description}
         </Typography>
         <Button
           variant="contained"
@@ -61,7 +61,7 @@ function App() {
           <img src="/images/profile.png" alt="profile" width={300} />
           <Divider variant="middle" orientation="vertical" flexItem />
           <Typography lineHeight={3} textAlign={"left"}>
-            {data.basicInfo.aboutMe}
+            {myData.basicInfo.aboutMe}
           </Typography>
         </Stack>
       </Section>
@@ -77,7 +77,7 @@ function App() {
       >
         <Typography variant="h6">Frontend</Typography>
         <Stack flexWrap={"wrap"} flexDirection={"row"} gap={1}>
-          {data.skills.frontend.map((skill) => (
+          {myData.skills.frontend.map((skill) => (
             <Chip
               sx={{ padding: 2, borderRadius: 1, fontSize: 16, opacity: 0.6 }}
               label={skill}
@@ -86,7 +86,7 @@ function App() {
         </Stack>
         <Typography variant="h6">Backend</Typography>
         <Stack flexWrap={"wrap"} flexDirection={"row"} gap={1}>
-          {data.skills.backend.map((skill) => (
+          {myData.skills.backend.map((skill) => (
             <Chip
               sx={{ padding: 2, borderRadius: 1, fontSize: 16, opacity: 0.6 }}
               label={skill}
@@ -95,7 +95,7 @@ function App() {
         </Stack>
         <Typography variant="h6">Database</Typography>
         <Stack flexWrap={"wrap"} flexDirection={"row"} gap={1}>
-          {data.skills.database.map((skill) => (
+          {myData.skills.database.map((skill) => (
             <Chip
               sx={{ padding: 2, borderRadius: 1, fontSize: 16, opacity: 0.6 }}
               label={skill}
@@ -104,7 +104,7 @@ function App() {
         </Stack>
         <Typography variant="h6">Tools</Typography>
         <Stack flexWrap={"wrap"} flexDirection={"row"} gap={1}>
-          {data.skills.tools.map((skill) => (
+          {myData.skills.tools.map((skill) => (
             <Chip
               sx={{ padding: 2, borderRadius: 1, fontSize: 16, opacity: 0.6 }}
               label={skill}
@@ -123,7 +123,7 @@ function App() {
           "Here you will find some of the personal and clients projects that I created with each project containing its own case study"
         }
       >
-        {data.projects.map((project) => (
+        {myData.projects.map((project) => (
           <ProjectCard {...project} />
         ))}
       </Section>

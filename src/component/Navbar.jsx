@@ -1,8 +1,7 @@
 import React from "react";
 import { AppBar, Link, Stack, styled, Switch, Toolbar } from "@mui/material";
 // import { useColorScheme } from "@mui/material";
-
-import data from "../data.json";
+import {myData} from '../data'
 
 const navLinks = [
   {
@@ -53,7 +52,7 @@ export default function Navbar() {
             },
           }}
         >
-          {data.basicInfo.name}
+          {myData.basicInfo.name}
         </Link>
         <Stack sx={{ flexDirection: "row", gap: 5, alignItems: "center" }}>
           {navLinks.map((link) => (

@@ -6,7 +6,7 @@ import {
   Instagram,
   YouTube,
 } from "@mui/icons-material";
-import data from "../data.json";
+import { myData } from "../data";
 
 function Footer() {
   return (
@@ -21,10 +21,10 @@ function Footer() {
     >
       {/* Name and description */}
       <Typography variant="h6" fontWeight="bold">
-       {data.basicInfo.name}
+       {myData.basicInfo.name}
       </Typography>
       <Typography variant="body1" sx={{ mt: 1 }}>
-        {data.basicInfo.description}
+        {myData.basicInfo.description}
       </Typography>
 
       {/* Social Icons */}
@@ -32,7 +32,7 @@ function Footer() {
         <IconButton
           color="inherit"
           component="a"
-          href={data.basicInfo.socialMedia.linkedin}
+          href={myData.basicInfo.socialMedia.linkedin}
           target="_blank"
         >
           <LinkedIn />
@@ -40,7 +40,7 @@ function Footer() {
         <IconButton
           color="inherit"
           component="a"
-          href={data.basicInfo.socialMedia.github}
+          href={myData.basicInfo.socialMedia.github}
           target="_blank"
         >
           <GitHub />
@@ -48,7 +48,7 @@ function Footer() {
         <IconButton
           color="inherit"
           component="a"
-          href={data.basicInfo.socialMedia.instagram}
+          href={myData.basicInfo.socialMedia.instagram}
           target="_blank"
         >
           <Instagram />
@@ -56,7 +56,7 @@ function Footer() {
         <IconButton
           color="inherit"
           component="a"
-          href={data.basicInfo.socialMedia.youtube}
+          href={myData.basicInfo.socialMedia.youtube}
           target="_blank"
         >
           <YouTube />
@@ -74,7 +74,7 @@ function Footer() {
             underline="hover"
             fontWeight="bold"
           >
-            {data.basicInfo.name}
+            {myData.basicInfo.name}
           </Link>
         </Typography>
       </Box>
